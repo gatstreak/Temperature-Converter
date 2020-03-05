@@ -25,7 +25,7 @@ namespace Temperature_Converter
         {
             txtCel.Text = Convert.ToString(CelFah(Cel: Convert.ToSingle(txtCel.Text)));
         }
-        //METHOD
+        //METHOD 
 
         public Single CelFah(Single Cel)
         {
@@ -39,7 +39,7 @@ namespace Temperature_Converter
         {
             txtCel.Text = Convert.ToString(FahCel(Fah: Convert.ToSingle(txtFah.Text)));
         }
-
+        //2ND METHOD
         public Single FahCel(Single Fah)
         {
             Fahrenheit = (float)((5.0 / 9.0) * (Fah - 32.0));
