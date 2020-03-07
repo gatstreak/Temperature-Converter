@@ -23,27 +23,29 @@ namespace Temperature_Converter
 
         private void btnCel_Click(object sender, EventArgs e)
         {
-            txtCel.Text = Convert.ToString(CelFah(Cel: Convert.ToSingle(txtCel.Text)));
+            txtCel.Text = Convert.ToString(CelFah(Fah:Convert.ToSingle(txtFah.Text)));
         }
-        //METHOD 
-
-        public Single CelFah(Single Cel)
+     
+        //2ND METHOD
+        public Single CelFah(Single Fah)
         {
-            Celcius = (float)(Cel * (9.0 / 5.0) + 32);
-            return Fahrenheit;
+            Celcius = (float)((5.0 / 9.0) * (Fah - 32.0)); ;
+            return Celcius;
         }
 
 
         //button converts fahrenheit to celsius
         private void btnFah_Click(object sender, EventArgs e)
         {
-            txtCel.Text = Convert.ToString(FahCel(Fah: Convert.ToSingle(txtFah.Text)));
+            txtFah.Text = Convert.ToString(FahCel(Cel: Convert.ToSingle(txtCel.Text)));;
         }
-        //2ND METHOD
-        public Single FahCel(Single Fah)
+
+        //METHOD 
+
+        public Single FahCel (Single Cel)
         {
-            Fahrenheit = (float)((5.0 / 9.0) * (Fah - 32.0));
-            return Celcius;
+            Fahrenheit = (float)(Cel * (9.0 / 5.0) + 32);
+            return Fahrenheit;
         }
     }
 }
